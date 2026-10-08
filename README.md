@@ -17,7 +17,9 @@ Deployed and configured an Active Directory domain controller and Windows 11 cli
 - Windows domain management
 - Remote Desktop
 
+<p>
 This project demonstrates an understanding of several ideas and tools integral to entry-level IT. Deploying AD itself is important for a business setting that utilizes it for organizing its user database. Using cloud infrastructure to carry this out brings in another level of exposure to common IT tools, including VMs, OS, and RDP.
+</p>
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
