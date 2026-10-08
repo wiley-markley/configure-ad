@@ -2,7 +2,7 @@
 <img src="https://i.imgur.com/pU5A58S.png" alt="Microsoft Active Directory Logo"/>
 </p>
 
-<h1>Azure Windows Server Domain Controller & Client DNS Configuration</h1>
+<h1>Configuring On-Premises Active Directory Within Azure VMs</h1>
 Created an Azure VM with the Windows Server OS, to operate as a domain controller for another Azure VM using Windows 11. Configured static IP, used Cloud Shell to troubleshoot issues rerouting DNS traffic to private IP address, then validated the two connected VMs. <br />
 
 <h2>Environments and Technologies Used</h2>
@@ -72,5 +72,13 @@ Used Azure's Cloud Shell to override client-1's DNS server assignment. Then, use
 </p>
 <p>
 Used the ping command to dc-1's private IP from the Windows 11 VM to validate the connection.
+</p>
+<br />
+
+<p>
+<img width="768" height="538" alt="image" src="https://github.com/user-attachments/assets/a4d121f4-9c97-4082-87c5-44a1bdd96000" />
+</p>
+<p>
+Installed Active Directory Domain Services (AD DS) and promoted the Windows Server VM to a domain controller. Configured the Windows 11 client to use the domain controller for DNS and verified successful domain/network communication.
 </p>
 <br />
