@@ -5,27 +5,28 @@
 <h1>Configuring Active Directory Domain Services in Microsoft Azure</h1>
 Deployed and configured an Active Directory domain controller and Windows 11 client in Microsoft Azure. Configured static networking, DNS, AD DS, and domain connectivity while troubleshooting Azure DNS configuration issues using Cloud Shell and PowerShell. <br />
 
-<h2>Environments and Technologies Used</h2>
+<h2>Skills Demonstrated</h2>
 
-- Microsoft Azure (Virtual Machines/Compute)
-- Remote Desktop
+- Azure VM deployment
+- Windows Server administration
 - Active Directory Domain Services
-- Cloud Shell
+- DNS configuration/troubleshooting
+- TCP/IP networking
 - PowerShell
-
-<h2>Operating Systems Used </h2>
-
-- Windows Server 2025
-- Windows 11 (25H2)
+- Azure Cloud Shell
+- Windows domain management
+- Remote Desktop
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Created Domain Controller
-- Created Client VM
-- Change DC NIC private IP to static
-- Validate DNS traffic from Client VM to DC
-- Promote dc-1 to Domain Controller
-- Configured the client VM to use the domain controller as its DNS server
+- Deployed Windows Server and Windows 11 Azure VMs
+- Configured a static private IP for the domain controller
+- Configured the client VM to use the domain controller for DNS
+- Troubleshot Azure DNS configuration using Cloud Shell
+- Installed and configured AD DS
+- Promoted the server to a domain controller
+- Joined the Windows 11 client to the domain
+- Validated DNS resolution and network connectivity
 
 <h2>Deployment and Configuration Steps</h2>
 
@@ -65,7 +66,7 @@ Encountered an Azure DNS configuration issue when attempting to assign the domai
 <img width="512" height="294" alt="image" src="https://github.com/user-attachments/assets/2b58ab08-8fd0-482b-b816-10380fa1dc51" />
 </p>
 <p>
-Used Azure's Cloud Shell to override client-1's DNS server assignment. Then, used "ipconfig /all" in Windows 11 to validate that the DNS Server was then correct.
+Used Azure Cloud Shell and PowerShell to update the client VM's DNS configuration to point to the domain controller's static private IP. Verified the resulting DNS configuration with ipconfig /all.
 </p>
 <br />
 
