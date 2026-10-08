@@ -9,43 +9,60 @@ Created an Azure VM with the Windows Server OS, to operate as a domain controlle
 
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
-- Active Directory Domain Services
+- Cloud Shell
 - PowerShell
 
 <h2>Operating Systems Used </h2>
 
-- Windows Server 2022
-- Windows 10 (21H2)
+- Windows Server 2025
+- Windows 11 (25H2)
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+- Created Domain Controller
+- Created Client VM
+- Change DC NIC private IP to static
+- Route Client VM DNS server to DC
+- Validate DNS traffic from Client VM to DC
 
 <h2>Deployment and Configuration Steps</h2>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="512" height="197" alt="image" src="https://github.com/user-attachments/assets/c45650d7-9bf6-475b-a0f3-046f8956ce2a" />
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Deployed an Azure VM using Windows Server OS to serve as a Domain Controller.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="512" height="197" alt="image" src="https://github.com/user-attachments/assets/746ecf35-c196-4eeb-82ab-b9fb7a7ba9e2" />
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Deployed a second Azure VM using Windows 11 OS this time to serve as the client with the same region and VNet as the DC.
+</p>
+<br />
+
+<p>
+<img width="512" height="183" alt="image" src="https://github.com/user-attachments/assets/4535c47b-5f3c-474d-9edf-3732490e5c36" />
+</p>
+<p>
+Changed the NIC private IP allocation from "dynamic" to "static" so that the client would have a stable IP to connect to.
+</p>
+<br />
+
+<p>
+<img width="512" height="212" alt="image" src="https://github.com/user-attachments/assets/f86091cc-60c9-4c23-b7b7-4e9178c54149" />
+</p>
+<p>
+Ran into an issue assigning the client VM's DNS server as the DC's private IP.
+</p>
+<br />
+
+<p>
+<img width="512" height="212" alt="image" src="https://github.com/user-attachments/assets/f86091cc-60c9-4c23-b7b7-4e9178c54149" />
+</p>
+<p>
+Ran into an issue assigning the client VM's DNS server as the DC's private IP.
 </p>
 <br />
