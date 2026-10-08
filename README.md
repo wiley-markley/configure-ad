@@ -60,9 +60,17 @@ Ran into an issue assigning the client VM's DNS server as the DC's private IP.
 <br />
 
 <p>
-<img width="512" height="212" alt="image" src="https://github.com/user-attachments/assets/f86091cc-60c9-4c23-b7b7-4e9178c54149" />
+<img width="512" height="294" alt="image" src="https://github.com/user-attachments/assets/2b58ab08-8fd0-482b-b816-10380fa1dc51" />
 </p>
 <p>
-Ran into an issue assigning the client VM's DNS server as the DC's private IP.
+Used Azure's Cloud Shell to override client-1's DNS server assignment. Then, used "ipconfig /all" in Windows 11 to validate that the DNS Server was then correct.
+</p>
+<br />
+
+<p>
+<img width="366" height="164" alt="image" src="https://github.com/user-attachments/assets/9f6a633e-7041-418e-8c5b-10df39106301" />
+</p>
+<p>
+Attempted to ping dc-1's private IP from the Windows 11 VM to validate the connection. The packets were lost, so I realized I needed to disable Windows Firewall on dc-1's system. Then, validated the connection once more from the client VM, and the ping was established.
 </p>
 <br />
