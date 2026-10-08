@@ -9,6 +9,7 @@ Deployed and configured an Active Directory domain controller and Windows 11 cli
 
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
+- Active Directory Domain Services
 - Cloud Shell
 - PowerShell
 
