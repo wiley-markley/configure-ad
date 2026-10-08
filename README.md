@@ -2,7 +2,7 @@
 <img src="https://i.imgur.com/pU5A58S.png" alt="Microsoft Active Directory Logo"/>
 </p>
 
-<h1>Using Domain Controller to Route DNS Traffic Through the Cloud (Azure)</h1>
+<h1>Azure Windows Server Domain Controller & Client DNS Configuration</h1>
 Created an Azure VM with the Windows Server OS, to operate as a domain controller for another Azure VM using Windows 11. Configured static IP, used Cloud Shell to troubleshoot issues rerouting DNS traffic to private IP address, then validated the two connected VMs. <br />
 
 <h2>Environments and Technologies Used</h2>
@@ -47,7 +47,7 @@ Deployed a second Azure VM using Windows 11 OS this time to serve as the client 
 <img width="512" height="183" alt="image" src="https://github.com/user-attachments/assets/4535c47b-5f3c-474d-9edf-3732490e5c36" />
 </p>
 <p>
-Changed the NIC private IP allocation from "dynamic" to "static" so that the client would have a stable IP to connect to.
+Changed the domain controller's private IP allocation from dynamic to static to provide the client VM with a consistent DNS server address.
 </p>
 <br />
 
@@ -68,9 +68,9 @@ Used Azure's Cloud Shell to override client-1's DNS server assignment. Then, use
 <br />
 
 <p>
-<img width="366" height="164" alt="image" src="https://github.com/user-attachments/assets/9f6a633e-7041-418e-8c5b-10df39106301" />
+<img width="512" height="243" alt="image" src="https://github.com/user-attachments/assets/aed49b71-9c95-420e-b4f2-81465305d206" />
 </p>
 <p>
-Attempted to ping dc-1's private IP from the Windows 11 VM to validate the connection. The packets were lost, so I realized I needed to disable Windows Firewall on dc-1's system. Then, validated the connection once more from the client VM, and the ping was established.
+Used the ping command to dc-1's private IP from the Windows 11 VM to validate the connection.
 </p>
 <br />
